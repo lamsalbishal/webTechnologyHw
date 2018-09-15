@@ -1,0 +1,89 @@
+
+Q1 > Difference between setTimeout() and setInterval() with example.\
+=>  
+    setTimeout() runs the code once after the timeout.
+     Example: 
+     setTimeout(alert, 1000); // Will alert once, after a second.
+
+    setInterval() runs the code in intervals,with the length of timeout between them.
+    Example:
+    var intervalID = setInterval(alert, 1000); // Will alert every second.
+
+ Q2 > What is DOM? Explain DOM hierarchy with example.
+ => 
+    DOM is a programming interface for HTML and XML documents. It represents the page so that 
+    programs can change the document structure, style, and content.The DOM represents the
+    document as nodes and objects.That way, programming languages can connect to the page.
+
+    In JavaScript,
+
+    When a web page is loaded, the browser creates a Document Object Model of the page, which is an
+    object oriented representation of an HTML document, that acts as an interface between JavaScript
+    and the document itself and allows the creation of dynamic web pages
+    a) JavaScript can add, change, and remove all of the HTML elements and attributes in the page.
+    b) JavaScript can change all of the CSS styles in the page.
+    c) JavaScript can react to all of the existing events in the page.
+    d) JavaScript can create new events within the page.
+
+    A Web page is a document. This document can be either displayed in the browser window or as the
+    HTML source. But it is the same document in both cases. The Document Object Model (DOM)
+    represents that same document so it can be manipulated. The DOM is an object-oriented 
+    representation of the web page, which can be modified with a scripting language such as 
+    JavaScript.
+
+    For example, the standard DOM specifies that the getElementsByTagName method in the code below 
+    must return a list of all the <P> elements in the document:
+
+    var paragraphs = document.getElementsByTagName("P");
+	// paragraphs[0] is the first <p> element
+	// paragraphs[1] is the second <p> element, etc.
+	alert(paragraphs[0].nodeName);
+
+	All of the properties, methods, and events available for manipulating and creating web pages are 
+	organized into objects (e.g., the document object that represents the document itself, the table
+	object that implements the special HTMLTableElement DOM interface for accessing HTML tables,
+	and so forth).
+ 
+ Q3 > What are possible errors while writing JS code?
+ =>  Listed type of errors are possible errors while writing JS code :
+ 		
+
+***************  SYNTAX EROOR  ********************************************************************* 		 
+	Syntax errors, also called parsing errors, occur at compile time in traditional programming 
+	languages and at interpret time in JavaScript.
+
+	For example, the following line causes a syntax error because it is missing a closing parenthesis.
+
+	<script type="text/javascript">
+	   <!--
+	      window.print(;
+	   //-->
+	</script>
+
+	When a syntax error occurs in JavaScript, only the code contained within the same thread as the   
+	syntax error is affected and the rest of the code in other threads gets executed assuming nothing 
+	in them depends on the code containing the error.
+
+******************* RUNTIME ERRORS *******************************************************************
+	Runtime errors, also called exceptions, occur during execution (after compilation/interpretation).
+
+	For example, the following line causes a runtime error because here the syntax is correct, but at 
+	runtime, it is trying to call a method that does not exist.
+
+	<script type="text/javascript">
+	   <!--
+	      window.printme();
+	   //-->
+	</script>
+
+	Exceptions also affect the thread in which they occur, allowing other JavaScript threads to continue
+	normal execution.
+
+****************** LOGICAL ERRORS  *********************************************************************
+    
+    Logic errors can be the most difficult type of errors to track down. These errors are not the   
+    result of a syntax or runtime error. Instead, they occur when you make a mistake in the logic   
+    that drives your script and you do not get the result you expected.
+
+	You cannot catch those errors, because it depends on your business requirement what type of logic
+	you want to put in your program.
